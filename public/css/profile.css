@@ -98,4 +98,10 @@ body{
     .line_2{
         margin-left: 20px;
     }
+    .InfoDB{
+        max-width: 190px;
+    }
+    .mailDB,.nameDB{
+        overflow-y: scroll;
+    }
 }
