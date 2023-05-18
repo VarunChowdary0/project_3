@@ -1,0 +1,86 @@
+body{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-image:linear-gradient(70deg,rgb(32, 50, 103) ,rgb(36, 8, 8));
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    z-index: 100;
+    height: 300px;
+    width: 300px;border-radius: 10px;
+    box-shadow: 0 0 30px rgb(25, 19, 36);
+    background-color: rgba(21, 18, 18, 0.199);
+    transition: all 0.5s;
+    position: relative;
+}
+.container:hover{
+    box-shadow: none;
+}
+form{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    gap: 15px;  
+}
+input{
+    width: 240px;
+    height: 40px;
+    filter: blur(0px);
+    border-radius: 5px;
+    padding-left: 10px;
+    border: none;
+}
+input:focus{
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(67, 64, 52);
+}
+button{
+    margin-top: 20px;
+    height: 35px;
+    width: 70px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.5s;
+    color: aliceblue;
+    overflow: visible;
+    background-color: rgba(0, 0, 0, 0.158);
+}
+button:active ~ .sider{
+    transform: translateX(150px);
+    transition: all 0.2s ease;
+}
+.sider{
+    width: 70px;
+    height: 35px;
+    position: absolute;
+    right: 80px;
+    bottom: 0;
+    background-color: rgba(72, 21, 200, 0.644);
+    /* animation: slide 0.2s 1 ease-in-out; */
+} 
+.buttonEff{
+    overflow: hidden;
+    position: absolute;
+    bottom: 13px;
+    left: 120px;
+}
+.text_1{
+    color: lavender;
+    font-size: 2rem;
+}
+.flash_V{
+    color: lavender;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

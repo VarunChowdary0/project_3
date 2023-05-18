@@ -1,0 +1,26 @@
+body{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* background-image:linear-gradient(70deg,rgb(32, 50, 103) ,rgb(36, 8, 8)); */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: rotate 2s 4 ;
+    transition: all 5s;
+}
+@keyframes rotate {
+    /*set animation*/
+    0%{
+        background-image: linear-gradient(90deg,rgb(32, 50, 103) ,rgb(36, 8, 8));
+    }
+    100%{
+        background-image: linear-gradient(360deg,rgb(32, 50, 103) ,rgb(36, 8, 8));;
+    }
+    
+}
+.text{
+    color: lavender;
+    font-size: 2rem;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/signUp.css">
+</head>
+<body>
+    <p class="title">
+        This is trail for user Sign in and sign Up.
+    </p>
+    <div class="container">
+        <form class="form">
+            <input type="text" name="name" class="Name" placeholder="Name" required>
+            <input type="email" name="email" class="mail" placeholder="Mail Address" required>
+            <input type="date" name="dob" class="dob" placeholder="Date of Birth" required>
+            <input type="text" name="username" class="usrnme" placeholder="Username" required>
+            <input type="password" name="password" class="pswd" placeholder="Password" required>
+        </form>
+        <div class="buttonEff">
+            <button class="submit s" onclick="takeData()">Submit </button>
+            <div class="sider s"></div>
+        </div>
+        <div class="link_to"><a href="/SignIN">Sign In ?</a></div>
+    </div>
+    <p class="flash"> </p>
+    
+    <script src="js/all.js"></script>
+</body>
+</html>
