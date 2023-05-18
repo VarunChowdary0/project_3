@@ -2,7 +2,7 @@ const express=require('express')
 const mongoose=require('mongoose')
 const app=express();
 
-mongoose.connect('mongodb://127.0.0.1:27017/Node_trails')
+mongoose.connect('mongodb+srv://user_Application:application@cluster0.epypnho.mongodb.net/Node_trails?retryWrites=true&w=majority')
     .then(()=>{
         console.log("Connected");
     })
