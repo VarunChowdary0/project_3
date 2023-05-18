@@ -25,9 +25,13 @@ const UserModel=mongoose.model('trailData',userSchema)
             app.use(express.static('public'));
 app.use(express.json());
 
+
 app.set('view engine','ejs');
 app.set('views', './views')
 
+app.get('/',(req,res)=>{
+    res.render('signUp');
+})
 app.get('/SignUp',(req,res)=>{
     res.render('signUp');
 })
