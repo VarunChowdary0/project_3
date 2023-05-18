@@ -73,24 +73,7 @@ app.post('/verify',(req,res)=>{
         if(result.length===0)
         {
             console.log("not found");
-            res.status(404).json(result);
-            
-        }
-        else{
-            console.log(result);
-            res.status(200).json({})
-            app.post('/verify',(req,res)=>{
-    const verify=req.body;
-    // stored request in verify
-    // console.log(verify);
-    // console.log(verify.Username);
-    UserModel.find(verify)
-    .then(result =>{
-        if(result.length===0)
-        {
-            console.log("not found");
-            res.status(404).json(result);
-            
+            res.status(404).json(result);        
         }
         else{
             console.log(result);
@@ -100,14 +83,6 @@ app.post('/verify',(req,res)=>{
     .catch(err=>{
         console.log("Caught error: ",err);
     })
-
-})
-        }
-    })
-    .catch(err=>{
-        console.log("Caught error: ",err);
-    })
-
 })
 app.listen(1000,()=>{
     console.log("App server running..........")

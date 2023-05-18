@@ -3,13 +3,13 @@ body{
     display: flex;
     flex-direction: column;
     background-image:linear-gradient(70deg,rgb(32, 50, 103) ,rgb(36, 8, 8)); 
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     animation: rotate 2s 4 ;
     transition: all 5s;
     min-width: 270px;
+    color: lavender;
+    font-size: 20px;
 }
 /* @keyframes rotate {
 
@@ -26,9 +26,76 @@ body{
     color: lavender;
     font-size: 2rem;
 }
+.heading{
+    color: lavender;
+    font-size: 2rem;
+}
+.line_1{
+   margin-left: 50px;
+}
+.hr_1,.hr_2{
+    width: 90%;
+    border-color: rgb(207, 178, 237);
+    margin-bottom: 30px;
+}
+.hr_2{
+    margin-top: 40px;
+}
+.line_2{
+    margin-left: 70px;
+    display: flex;
+    gap: 20%;
+}
+.segment{
+    color: rgb(168, 174, 248);
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.Edit_{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    height: 40px;
+    color: rgb(22, 215, 245);
+    background-color: rgba(0, 0, 0, 0.137);
+    border: 0;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding:5px 10px ;
+    border-radius: 10px;
+}
+.Edit_:active{
+    opacity: 0.5;
+}
+.InfoDB{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.usernameDB,.passwordDB{
+    filter: blur(5px);
+}
+.usernameDB:active,.passwordDB:active{
+    filter: blur(0);
+}
+.out{
+    position: relative;
+    left: 70px;
+    top: 50px;
+}
 @media screen and (max-width:670px){
-    .text{
-        margin-left: 10%;
-        font-size: 25px;
+    .heading{
+        font-size: 20px;
+        margin-left: 0%;
+        margin-top: 10%;
+    }
+    .name,.InfoDB{
+        font-size: 16px;
+    }
+    .line_2{
+        margin-left: 20px;
     }
 }

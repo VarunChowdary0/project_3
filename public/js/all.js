@@ -1,4 +1,6 @@
 let flasher=document.querySelector(".flash");
+let DataStro;
+let userInfo=JSON.parse(localStorage.getItem('userINFO'))||[];
 let name;
 let email;
 let dob;
@@ -92,7 +94,7 @@ function verifyData(){
     else{
         DataVerify.Username=username_V;
         DataVerify.Password=password_V;
-        console.log(DataVerify);
+        //console.log(DataVerify);
         fetch('/verify',{
             method:'POST',
             headers:{
@@ -103,16 +105,46 @@ function verifyData(){
         .then(res=>{
             if(res.ok){
                 console.log("welcome.....");
-                console.log(res)
-                window.location.href="/profile";
+                return res.json();
             }
             else{
                 console.log("Invalied");
                 document.querySelector(".flash_V").innerHTML='Invalied Credentials';
         }
-    })
+        })
+        .then(data =>{
+            DataStro=data[0];
+            console.log(DataStro);
+            localStorage.setItem('userINFO',JSON.stringify(DataStro));
+            window.location.href="/profile";
+            console.log(userInfo);
+        })
         .catch(err=>{
             console.log("fetch error: ",err);
         })
     }
+}
+function redir(){
+    window.location.href='/editData';
+}
+window.onload = function (){
+    if(window.location.pathname=='/profile')
+    {
+        showData();
+    }
+}
+function showData(){
+    if(userInfo.length!=0)
+    {
+        document.querySelector(".nameDB").innerHTML=userInfo.Name;
+        document.querySelector(".mailDB").innerHTML=userInfo.Email;
+        document.querySelector(".dobDB").innerHTML=userInfo.DOB;
+        document.querySelector(".passwordDB").innerHTML=userInfo.Password;
+        document.querySelector(".usernameDB").innerHTML=userInfo.Username;
+    }
+}
+function logout()
+{
+    localStorage.clear()
+    window.location.href='/';
 }
